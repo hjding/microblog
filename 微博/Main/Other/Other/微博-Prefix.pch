@@ -1,0 +1,75 @@
+//
+//  PrefixHeader.pch
+//  微博
+//
+//  Created by hjd on 15/9/15.
+//  Copyright (c) 2015年 hjd. All rights reserved.
+//
+
+#ifndef ___微博//-Prefix_pch
+#define ___微博 -Prefix_pch
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Helper.h"
+#import "UIViewExt.h"
+#import "UIView+Extension.h"
+#import "Reachability.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"
+#import "MBProgressHUD+MJ.h"
+#import "WeiboSDK.h"
+#import "ColorAndFont.h"
+#endif
+
+#define IOS7                    ([[[UIDevice currentDevice]systemVersion]doubleValue]>=7.0)
+#define IOS8                    ([[[UIDevice currentDevice]systemVersion]doubleValue]>=8.0)
+
+#define kDeviceHeight           [UIScreen mainScreen].bounds.size.height
+#define kDeviceWidth            [UIScreen mainScreen].bounds.size.width
+#define kTopStatusBarHeight     20.f
+#define kNavigationBarHeight    44.f
+#define NavigationHeight      CGRectGetMaxY([self.navigationController navigationBar].frame)//导航栏高度
+#define kSearchBarHeight        44.f
+#define kTabBarHeight           49.f
+
+//随机色
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+//颜色
+#define Color(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1.0]
+//公用颜色
+#define CommonColor [UIColor colorWithRed:254/255.0  green:129/255.0 blue:0 alpha:1.0]
+//导航栏标题字体大小
+#define NavigationFont [UIFont boldSystemFontOfSize:16]
+//导航栏标题按钮高度和边距
+#define NavigationItemOfTitleViewHeight 34
+#define NavigationItemMargin 10
+//首页导航popmenu距离顶部高度
+#define PopMenuMarginTop 10
+//页面留白
+#define kMargin 10.f
+
+//新浪
+//#define kXinLangWeiboAppKey     @"987353130"
+//#define kXinLangWeiboAPPSecret  @"37306725e601e61a316b7eba1073f660"
+#define kXinLangWeiboAppKey     @"2045436852" //WeiboSDKLibDemo Appkey
+#define kRedirectURI            @"http://www.sina.com"
+#define kWBAuthorizeResponseNotification    @"WBAuthorizeResponseNotification" 
+//wbtoken = 2.00lau6JEyY87OCb6754fd3c22_QWVD,
+//wbRefreshToken = 2.00lau6JEyY87OCc340cad02bRf4ZiB,
+//wbCurrentUserID = 3803694095
+#define kWBToken                            @"2.00lau6JEyY87OCb6754fd3c22_QWVD"
+#define kWBRefreshToken                     @"2.00lau6JEyY87OCc340cad02bRf4ZiB"
+#define kWBCurrentUserID                    @"3803694095"
+
+#endif
