@@ -116,8 +116,8 @@
 }
 
 #pragma mark - Target
-//此方法不调用,解决上面警告
--(void)bt_wbloginPressed{}
+////此方法不调用,解决上面警告
+//-(void)bt_wbloginPressed{}
 
 -(void)hideKeyboard{
     [self.view endEditing:YES];

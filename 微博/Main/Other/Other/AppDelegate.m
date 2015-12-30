@@ -142,7 +142,7 @@
     //获取用户信息
     [MBProgressHUD showMessage:@"正在登陆"];
     NSOperationQueue *queue=[[NSOperationQueue alloc]init];
-    queue.name=@"test1";
+    queue.name=@"queue1";
     NSDictionary *dic=@{@"access_token":kWBToken,
                         @"uid":kWBCurrentUserID
                         };
